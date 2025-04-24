@@ -11,6 +11,6 @@ spec:
       chart: helloworld
       version: 0.1.0
       sourceRef:
-        kind: HelmRepository
+        kind: gitRepository
         name: helloworld
       
