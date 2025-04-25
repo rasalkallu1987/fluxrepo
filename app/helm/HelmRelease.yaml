@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: my-app
-  namespace: nginx-ingress
+  name: my-app # this would be the name of helmrelease in cluster "kubectl get helmreleases -A"
+  namespace: nginx-ingress # above repository will create in this namespace
 spec:
   interval: 5m
   chart:
     spec:
-      chart: nginx-ingress           # Replace with your actual chart name
+      chart: nginx-ingress           # Replace with your actual repository name in ACR
       version: 1.3.3            # Replace with your chart version
       sourceRef:
         kind: HelmRepository
-        name: my-helm-repo
+        name: my-helm-repo # this is taken from helmrepository file in metadata, first repository file create repository with my-helm-repo in cluster then helm release will deploy using this repository
         namespace: nginx-ingress
       interval: 1m
 
