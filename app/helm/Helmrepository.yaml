@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: helloworld #name of the repository
-  namespace: helloworld
-spec:
-  interval: 5m
-  type: oci
-  url: oci://fluxacr1.azurecr.io
