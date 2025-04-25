@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: nginx-ingress #name of the repository
-  namespace: nginx-ingress
-spec:
-  interval: 5m
-  type: oci
-  url: oci://fluxacr1.azurecr.io/helm
