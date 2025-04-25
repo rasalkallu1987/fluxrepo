@@ -1,5 +1,8 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
+metadata:
+  name: nginx
+  namespace: nginx-ingress
 resources:
  - HelmRelease.yaml
  - HelmRepository.yaml
