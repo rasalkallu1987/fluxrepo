@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: my-helm-repo
-  namespace: nginx-ingress
+  name: my-helm-repo  # this is repository name which will create in cluster "kubectl get helmrepository -A"
+  namespace: nginx-ingress  # above repository will create in this namespace
 spec:
   type: oci
   url: oci://fluxacr1.azurecr.io/helm
