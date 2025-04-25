@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: helloworld #name of the repository
-  namespace: helloworld
+  namespace: flux-system
 spec:
   interval: 5m
   type: oci
