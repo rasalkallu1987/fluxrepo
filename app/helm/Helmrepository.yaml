@@ -6,4 +6,4 @@ metadata:
 spec:
   interval: 5m
   type: oci
-  url: oci://fluxacr1.azurecr.io/helloworld
+  url: oci://fluxacr1.azurecr.io
